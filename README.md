@@ -1,15 +1,15 @@
 # Automation project for qase.io
 
 # <a name="Content">Content:</a>
-+ [Technology stack](#Technology stack)
-+ [Test cases](#Test cases)
-+ [Running tests using terminal](#Running tests using terminal)
-+ [Deployment in Jenkins](#Deployment in Jenkins)
-+ [Allure Report](#Allure Report)
-+ [Telegram Notification](#Telegram Notification)
-+ [Tests execution video](#Tests execution video)
++ [Technology stack](#TechnologyStack)
++ [Test cases](#TestCases)
++ [Running tests using terminal](#RunningTestsUsingTerminal)
++ [Deployment in Jenkins](#DeploymentInJenkins)
++ [Allure Report](#AllureReport)
++ [Telegram Notification](#TelegramNotification)
++ [Tests execution video](#TestsExecutionVideo)
 
-# <a name="Technology stack">Technology stack</a>
+# <a name="TechnologyStack">Technology stack</a>
 
 <p align="center">
 <img width="6%" title="IntelliJ" src="images/logo/IntelliJ.svg">
@@ -26,7 +26,7 @@
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
 </p>
 
-# <a name="Test cases">Test cases</a>
+# <a name="TestCases">Test cases</a>
 
 > TC1 - Page title should have header text
 >
@@ -40,13 +40,13 @@
 >
 
 
-# <a name="Running tests using terminal">Running tests using terminal</a>
+# <a name="RunningTestsUsingTerminal">Running tests using terminal</a>
 
 ```bash
 gradle clean test
 ```
 
-# <a name="Deployment in Jenkins">Deployment in Jenkins</a>
+# <a name="DeploymentInJenkins">Deployment in Jenkins</a>
 
 ```bash
 clean
@@ -75,7 +75,7 @@ Test cases at Allure Report:
   <img src="images/screens/AllureTestCases.png" alt="job" width="800">
 </p>
 
-# <a name="Telegram Notification">Telegram Notification </a>
+# <a name="TelegramNotification">Telegram Notification </a>
 
 Notification to telegram about executing test cases
 
@@ -83,7 +83,7 @@ Notification to telegram about executing test cases
   <img src="images/screens/TelegramBot.png" alt="job" width="800">
 </p>
 
-# <a name="Tests execution video">Tests execution video</a>
+# <a name="TestsExecutionVideo">Tests execution video</a>
 
 <p align="center">
 <img title="Video Result" src="images/video/VideoResults.gif" width="250" height="153"  alt="video">
