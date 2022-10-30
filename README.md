@@ -1,6 +1,6 @@
 # Automation project for qase.io
 
-# <a name="Содержание">Содержание:</a>
+# <a name="Content">Content:</a>
 + [Technology stack](#Technology stack)
 + [Test cases](#Test cases)
 + [Running tests using terminal](#Running tests using terminal)
@@ -69,53 +69,21 @@ test
   <img src="images/screens/AllureOverview.png" alt="job" width="800">
 </p>
 
-Тест кейсы в Allure Report:
+Test cases at Allure Report:
 
 <p align="center">
   <img src="images/screens/AllureTestCases.png" alt="job" width="800">
 </p>
 
-#### Тестовые артефакты:
+# <a name="Telegram Notification">Telegram Notification </a>
 
-> - Набор тест кейсов
-> - Screenshot
-> - Page Source
-> - Video
-
-<p align="center">
-  <img src="images/screens/AllureResult.png" alt="job" width="800">
-</p>
-
-
-<p align="center">
-  <img src="images/screens/AllureGraphs.png" alt="job" width="800">
-</p>
-
-
-# <a name="AllureTestOpsОтчет">Allure TestOps отчет</a>
-
-Тест кейсы в Allure TestOps:
-
-<p align="center">
-  <img src="images/screens/TestCasesTestOps.png" alt="job" width="800">
-</p>
-
-# <a name="ОповещениеВTelegram">Оповещение в Telegram</a>
-
-Отправка уведомлений о результатах прохождения тестов осуществляется с помощью Telegram бота.
+Notification to telegram about executing test cases
 
 <p align="center">
   <img src="images/screens/TelegramBot.png" alt="job" width="800">
 </p>
 
-# <a name="ИнтеграцияСJira">Интеграция с Jira</a>
-Интеграция с Jira позволяет отследить результаты прохождения тестов.
-
-<p align="center">
-  <img src="images/screens/TestCasesJira.png" alt="job" width="800">
-</p>
-
-# <a name="ВидеоОПрохожденииТестов">Видео о прохождении тестов</a>
+# <a name="Tests execution video">Tests execution video</a>
 
 <p align="center">
 <img title="Video Result" src="images/video/VideoResults.gif" width="250" height="153"  alt="video">
