@@ -1,44 +1,122 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Automation project for qase.io
 
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+# <a name="Содержание">Содержание:</a>
++ [Technology stack](#Technology stack)
++ [Test cases](#Test cases)
++ [Running tests using terminal](#Running tests using terminal)
++ [Deployment in Jenkins](#Deployment in Jenkins)
++ [Allure Report](#Allure Report)
++ [Telegram Notification](#Telegram Notification)
++ [Tests execution video](#Tests execution video)
+
+# <a name="Technology stack">Technology stack</a>
+
+<p align="center">
+<img width="6%" title="IntelliJ" src="images/logo/IntelliJ.svg">
+<img width="6%" title="Java" src="images/logo/Java.svg">
+<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
+<img width="6%" title="Selenide" src="images/logo/Selenide.svg">
+<img width="6%" title="GitHub" src="images/logo/github.svg">
+<img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<img width="6%" title="Allure TestOps" src="images/logo/AllureTestOps.svg">
+<img width="6%" title="Allure Report" src="images/logo/AllureReport.svg">
+<img width="6%" title="Jira Cloud" src="images/logo/Jira.svg">
+<img width="6%" title="Telegram" src="images/logo/Telegram.svg">
+<img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
+</p>
+
+# <a name="Test cases">Test cases</a>
+
+> TC1 - Page title should have header text
+>
+> TC2 - Unauthorized user can navigate to login page from main page
+>
+> TC3 - Unauthorized user can navigate to price page from main page  
+>
+> TC4 - Unauthorized user can navigate to blog page from main page
+> 
+> TC5 - Unauthorized user can navigate to documentation page from main page
+>
 
 
-# USAGE examples
+# <a name="Running tests using terminal">Running tests using terminal</a>
 
-### For run remote tests need fill remote.properties or to pass value:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
-
-
-Run tests with filled remote.properties:
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+# <a name="Deployment in Jenkins">Deployment in Jenkins</a>
+
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+clean
+test
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
 ```
 
-Serve report:
-```bash
-allure serve build/allure-results
-```
+<p align="center">
+  <img src="images/screens/JenkinsPreference.png" alt="job" width="800">
+</p>
+
+# <a name="AllureReport">Allure Report</a>
+
+<p align="center">
+  <img src="images/screens/AllureOverview.png" alt="job" width="800">
+</p>
+
+Тест кейсы в Allure Report:
+
+<p align="center">
+  <img src="images/screens/AllureTestCases.png" alt="job" width="800">
+</p>
+
+#### Тестовые артефакты:
+
+> - Набор тест кейсов
+> - Screenshot
+> - Page Source
+> - Video
+
+<p align="center">
+  <img src="images/screens/AllureResult.png" alt="job" width="800">
+</p>
 
 
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
+<p align="center">
+  <img src="images/screens/AllureGraphs.png" alt="job" width="800">
+</p>
 
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+
+# <a name="AllureTestOpsОтчет">Allure TestOps отчет</a>
+
+Тест кейсы в Allure TestOps:
+
+<p align="center">
+  <img src="images/screens/TestCasesTestOps.png" alt="job" width="800">
+</p>
+
+# <a name="ОповещениеВTelegram">Оповещение в Telegram</a>
+
+Отправка уведомлений о результатах прохождения тестов осуществляется с помощью Telegram бота.
+
+<p align="center">
+  <img src="images/screens/TelegramBot.png" alt="job" width="800">
+</p>
+
+# <a name="ИнтеграцияСJira">Интеграция с Jira</a>
+Интеграция с Jira позволяет отследить результаты прохождения тестов.
+
+<p align="center">
+  <img src="images/screens/TestCasesJira.png" alt="job" width="800">
+</p>
+
+# <a name="ВидеоОПрохожденииТестов">Видео о прохождении тестов</a>
+
+<p align="center">
+<img title="Video Result" src="images/video/VideoResults.gif" width="250" height="153"  alt="video">
+</p>

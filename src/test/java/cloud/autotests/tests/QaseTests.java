@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class GeneratedTests extends TestBase {
+public class QaseTests extends TestBase {
     @Test
     @Description("Test verify that page title is displayed on main page")
     @DisplayName("Page title should have header text")
